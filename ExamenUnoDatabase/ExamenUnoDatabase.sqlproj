@@ -57,8 +57,13 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="StoredProcedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\TipoInquilino.sql" />
+    <Build Include="StoredProcedures\TipoInquilinoObtener.sql" />
+    <Build Include="StoredProcedures\TipoInquilinoInsertar.sql" />
+    <Build Include="StoredProcedures\TipoInquilinoActualizar.sql" />
+    <Build Include="StoredProcedures\TipoInquilinoEliminar.sql" />
   </ItemGroup>
 </Project>

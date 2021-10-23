@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[TipoInquilinoEliminar]
 
-	@IdTipoInquilino INT
+	@Id_TipoInquilino INT
 
 AS BEGIN
 
@@ -11,7 +11,7 @@ AS BEGIN
 		BEGIN TRY 
 			
 			DELETE FROM [dbo].[TipoInquilino]
-			WHERE Id_TipoInquilino = @IdTipoInquilino
+			WHERE Id_TipoInquilino = @Id_TipoInquilino
 			
 			COMMIT TRANSACTION TRANS
 			SELECT 0 AS CodeError, '' AS MsgError

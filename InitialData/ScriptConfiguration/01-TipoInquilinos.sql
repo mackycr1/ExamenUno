@@ -7,8 +7,8 @@ INTO #TipoInquilinosTemp
 FROM
 (
 	VALUES
-	(1, 'Fisico', TRUE),
-	(2, 'Juridico', TRUE)
+	(1, 'Fisico', 1),
+	(2, 'Juridico', 1)
 ) AS TEMP (Id_TipoInquilino, Descripcion, Estado)
 
 

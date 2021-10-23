@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[TipoInquilinoObtener]
 	
-	@IdTipoInquilino INT = NULL
+	@Id_TipoInquilino INT = NULL
 
 AS BEGIN
 
@@ -8,9 +8,9 @@ AS BEGIN
 
 	SELECT   Id_TipoInquilino
 			,Descripcion
-			,Estado BIT 
+			,Estado 
 	FROM [dbo].[TipoInquilino]
 	WHERE 
-	(@IdTipoInquilino IS NULL OR Id_TipoInquilino = @IdTipoInquilino)
+	(@Id_TipoInquilino IS NULL OR Id_TipoInquilino = @Id_TipoInquilino)
 
 END

@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[TipoInquilinoActualizar]
 
-	@IdTipoInquilino INT,
+	@Id_TipoInquilino INT,
 	@Descripcion VARCHAR(250),
 	@Estado BIT
 
@@ -15,7 +15,7 @@ AS BEGIN
 			UPDATE [dbo].[TipoInquilino]
 			SET Descripcion = @Descripcion,
 				Estado = @Estado
-			WHERE Id_TipoInquilino = @IdTipoInquilino
+			WHERE Id_TipoInquilino = @Id_TipoInquilino
 			
 			COMMIT TRANSACTION TRANS
 			SELECT 0 AS CodeError, '' AS MsgError

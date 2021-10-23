@@ -47,7 +47,7 @@ namespace WebApp.Pages.TipoInquilino
             try
             {
                 //Populates the UI with the information returned from the service.
-                var result = await tipoInquilinoService.Delete(new TipoInquilinoEntity { IdTipoInquilino = id });
+                var result = await tipoInquilinoService.Delete(new TipoInquilinoEntity { Id_TipoInquilino = id });
 
                 if (result.CodeError != 0)
                 {

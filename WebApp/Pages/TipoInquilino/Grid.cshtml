@@ -24,11 +24,11 @@
                             @foreach (var item in Model.GridList)
                             {
                             <tr>
-                                <td>@item.IdTipoInquilino</td>
+                                <td>@item.Id_TipoInquilino</td>
                                 <td>@item.Descripcion</td>
                                 <td>@item.Estado</td>
                                 <td>
-                                    <button type="button" class="btn btn-danger" onclick="TipoInquilinoGrid.OnClickDelete(@item.IdTipoInquilino)">
+                                    <button type="button" class="btn btn-danger" onclick="TipoInquilinoGrid.OnClickDelete(@item.Id_TipoInquilino)">
                                         <i class="bx bx-trash"></i>
                                     </button>
                                 </td>

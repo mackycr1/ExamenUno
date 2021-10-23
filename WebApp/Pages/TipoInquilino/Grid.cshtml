@@ -1,0 +1,56 @@
+﻿@page
+@model WebApp.Pages.TipoInquilino.GridModel
+@{
+}
+
+<div class="container-fluid">
+
+    <div class="card">
+        <div class="card-header">Tipo de Inquilinos</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-bordered table-stripped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Descripcion</th>
+                                <th>Estado</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.GridList)
+                            {
+                            <tr>
+                                <td>@item.IdTipoInquilino</td>
+                                <td>@item.Descripcion</td>
+                                <td>@item.Estado</td>
+                                <td>
+                                    <a class="btn btn-primary" asp-page="Editar" asp-route-id="@item.IdTipoInquilino">
+                                        <i class="bx bx-edit-alt"></i>
+                                    </a>
+                                    
+                                    <button type="button" class="btn btn-danger" onclick="TipoInquilinoGrid.OnClickDelete(@item.IdTipoInquilino)">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{ 
+    @*Gets the message from the Grid.cs*@
+    <script>
+        var MessageApp = "@Html.Raw(Model.Message)";
+    </script>
+
+    <script defer src="~/App/TipoInquilino/Grid.js"></script>
+}

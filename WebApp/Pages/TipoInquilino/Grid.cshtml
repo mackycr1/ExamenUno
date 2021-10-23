@@ -5,13 +5,15 @@
 
 }
 
+
 <div class="container-fluid">
     <div class="card">
+        <br />
         <div class="card-header">Tipo de Inquilinos</div>
         <div class="card-body">
             <div class="row">
                 <div class="col-12">
-                    <table class="table table-bordered table table-stripped table table-hover">
+                    <table id="GridView" class="table table-bordered table table-stripped table table-hover">
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -23,16 +25,16 @@
                         <tbody>
                             @foreach (var item in Model.GridList)
                             {
-                            <tr>
-                                <td>@item.Id_TipoInquilino</td>
-                                <td>@item.Descripcion</td>
-                                <td>@(@item.Estado == true ? "Activo" : "Inactivo")</td>
-                                <td>
-                                    <button type="button" class="btn btn-danger" onclick="TipoInquilinoGrid.OnClickDelete(@item.Id_TipoInquilino)">
-                                        <i class="bx bx-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>@item.Id_TipoInquilino</td>
+                                    <td>@item.Descripcion</td>
+                                    <td>@(@item.Estado == true ? "Activo" : "Inactivo")</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger" onclick="TipoInquilinoGrid.OnClickDelete(@item.Id_TipoInquilino)">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
                             }
                         </tbody>
                     </table>

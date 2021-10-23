@@ -1,22 +1,23 @@
 ﻿@page
 @model WebApp.Pages.TipoInquilino.GridModel
 @{
+    ViewData["Title"] = "Tipo Inquilino";
+
 }
 
 <div class="container-fluid">
-
     <div class="card">
         <div class="card-header">Tipo de Inquilinos</div>
         <div class="card-body">
             <div class="row">
                 <div class="col-12">
-                    <table class="table table-bordered table-stripped table-hover">
+                    <table class="table table-bordered table table-stripped table table-hover">
                         <thead>
                             <tr>
                                 <th>Id</th>
                                 <th>Descripcion</th>
                                 <th>Estado</th>
-                                <th></th>
+                                <th>Accion</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,10 +28,6 @@
                                 <td>@item.Descripcion</td>
                                 <td>@item.Estado</td>
                                 <td>
-                                    <a class="btn btn-primary" asp-page="Editar" asp-route-id="@item.IdTipoInquilino">
-                                        <i class="bx bx-edit-alt"></i>
-                                    </a>
-                                    
                                     <button type="button" class="btn btn-danger" onclick="TipoInquilinoGrid.OnClickDelete(@item.IdTipoInquilino)">
                                         <i class="bx bx-trash"></i>
                                     </button>
